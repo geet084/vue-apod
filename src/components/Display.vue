@@ -1,8 +1,12 @@
 <template>
   <div>
-    <h1>Nasa APoD</h1>
-    <p>{{apodImage.explanation}}</p>
-    <img :src="apodImage.url" alt="">
+    <h1>NASA Astronomy Picture of the Day</h1>
+    <h2>{{apodImage.title}}</h2>
+    <div>
+      <img :src="apodImage.url" alt>
+      <p class="explanation">{{apodImage.explanation}}</p>
+      <p class="footer">Date: {{apodImage.date}} Copyright: {{apodImage.copyright}}</p>
+    </div>
   </div>
 </template>
 
@@ -19,5 +23,27 @@ export default {
 <style scoped>
 h1 {
   margin: 40px 0 0;
+  font-size: 2.4rem;
+  background-color: #eee;
+}
+.explanation {
+  padding: 15px;
+  color: black;
+  background-color: #ffffff;
+  position: relative;
+  bottom: 265px;
+  width: 900px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.footer {
+  padding: 5px 15px;
+  color: black;
+  background-color: #ffffff;
+  position: relative;
+  bottom: 255px;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 </style>
