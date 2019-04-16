@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Display />
+    <Display :apodImage="this.apodImage"/>
   </div>
 </template>
 
@@ -9,8 +9,26 @@ import Display from './components/Display.vue'
 
 export default {
   name: 'app',
+  created: function () {
+    this.fetchPic()
+  },
+  data () {
+    return {
+      apodImage: {}
+    }
+  },
   components: {
     Display
+  },
+  methods: {
+    fetchPic: function () {
+      const root = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'
+      this.$http.get(root)
+      .then(result => {
+        console.log(result.data)
+        this.apodImage = result.data
+      })
+    }
   }
 }
 </script>
