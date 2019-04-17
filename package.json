@@ -2,7 +2,6 @@
   "name": "vue-apod",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://geet084.github.io/vue-apod/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
