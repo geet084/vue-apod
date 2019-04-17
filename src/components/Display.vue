@@ -24,23 +24,29 @@ export default {
 h1 {
   margin: 40px 0 0;
   font-size: 2.4rem;
-  background-color: #eee;
+  background-color: rgb(0, 0, 0);
+  color: rgb(106, 153, 169);
+}
+h2 {
+  margin: 15px auto -52px;
+  font-size: 2.4rem;
+  width: 900px;
+  border-radius: 10px;
+}
+h2, p {
+  background-color: rgb(143, 143, 143);
+  color: black;
+  position: relative;
 }
 .explanation {
   padding: 15px;
-  color: black;
-  background-color: #ffffff;
-  position: relative;
+  margin: 0 auto;
   bottom: 265px;
   width: 900px;
-  margin: 0 auto;
   border-radius: 15px;
 }
 .footer {
   padding: 5px 15px;
-  color: black;
-  background-color: #ffffff;
-  position: relative;
   bottom: 255px;
   width: 400px;
   margin: 0 auto;
